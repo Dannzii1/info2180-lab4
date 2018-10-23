@@ -1,12 +1,12 @@
 window.onload = main;
 
 function main(){
-
+/** Question 1 ***/
   let leftwall = document.getElementById("boundary1");
   leftwall.addEventListener("mouseover", function(){
      this.setAttribute("class", "boundary youlose");
    });
-
+/** Question 2 ***/
   let wallboundries = document.querySelectorAll(".boundary");
   let flagdis = -1;
 
@@ -24,7 +24,7 @@ function main(){
        });
      }
   }
-
+/** Question 3 ***/
 /***let ending = document.getElementById("end");
 ending.addEventListener("mouseover",function() {
   if(document.getElementsByClassName("boundary youlose").length == 0){
@@ -32,7 +32,7 @@ ending.addEventListener("mouseover",function() {
   }
 });
 ***/
-
+/** Question 4 ***/
 let startIt = document.getElementById("start");
 let statusIt = document.getElementById("status");
 
@@ -49,7 +49,7 @@ startIt.addEventListener("click", function(){
     statusIt.textContent = "Move your mouse over the \"S\" to begin.";
   }
 });
-
+/** Question 5 ***/
 let theEnd = document.getElementById("end");
 let theStatus = document.getElementById("status");
 
@@ -60,6 +60,7 @@ theEnd.addEventListener("mouseover", function(){
     theStatus.textContent = "You Lose!";
   }
 });
+/** Question 6 ***/
 
 
 }
