@@ -33,4 +33,23 @@ ending.addEventListener("mouseover",function() {
 });
 
 
+let startIt = document.getElementById("start");
+let statusIt = document.getElementById("status");
+
+startIt.addEventListener("click", function(){
+  let thisWall = document.querySelectorAll(".boundary");
+  if (thisWall.length != 0){
+    for(var a = 0; a < thisWall.length; a++){
+      if(thisWall[a].className == "boundary example"){
+        continue;
+      }
+      thisWall[a].className = "boundary";
+    }
+
+    statusIt.textContent = "Move your mouse over the \"S\" to begin.";
+  }
+});
+
+
+
 }
