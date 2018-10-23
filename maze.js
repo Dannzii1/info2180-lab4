@@ -25,13 +25,13 @@ function main(){
      }
   }
 
-let ending = document.getElementById("end");
+/***let ending = document.getElementById("end");
 ending.addEventListener("mouseover",function() {
   if(document.getElementsByClassName("boundary youlose").length == 0){
     alert("You Win!")
   }
 });
-
+***/
 
 let startIt = document.getElementById("start");
 let statusIt = document.getElementById("status");
@@ -50,6 +50,16 @@ startIt.addEventListener("click", function(){
   }
 });
 
+let theEnd = document.getElementById("end");
+let theStatus = document.getElementById("status");
+
+theEnd.addEventListener("mouseover", function(){
+  if (document.querySelectorAll(".youlose").length == 0){
+    theStatus.textContent = "You Win!";
+  }else {
+    theStatus.textContent = "You Lose!";
+  }
+});
 
 
 }
