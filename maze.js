@@ -25,7 +25,12 @@ function main(){
      }
   }
 
-
+let ending = document.getElementById("end");
+ending.addEventListener("mouseover",function() {
+  if(document.getElementsByClassName("boundary youlose").length == 0){
+    alert("You Win!")
+  }
+});
 
 
 }
