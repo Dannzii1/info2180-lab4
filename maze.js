@@ -61,6 +61,20 @@ theEnd.addEventListener("mouseover", function(){
   }
 });
 /** Question 6 ***/
+let cheater = document.getElementById("start");
+let mazed = document.getElementById("maze");
 
+cheater.addEventListener("mouseout", function() {
+  mazed.addEventListener("mouseleave", function() {
+    for(var a = 0; a < wallboundries.length; a ++){
+      document.getElementById("status").textContent = "You Lose!"
+      for(var a = 0; a < wallboundries.length; a++){
+        if( wallboundries[a].className.indexOf("example") == -1){
+          wallboundries[a].className = "boundary youlose";
+       }
+     }
+   }
+  });
+});
 
 }
